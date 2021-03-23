@@ -4,7 +4,7 @@ public class Entity {
     protected Vec3 vel;
     protected int tick;
 
-    Entity(Vec3 pos, Vec3 vel) {
+    Entity(Vec3 pos, Vec3 vel, SimulationManager sim) {
         this.pos=pos;
         this.vel=vel;
         this.tick=0;

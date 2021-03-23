@@ -27,7 +27,7 @@ public class TestCannonScriptAlpha extends Cannon {
         int runtime = 100;
 
         SimulationManager sim = new SimulationManager();
-        sim.entityList.add(Pearl.createEntity(pearlInit, momentumInit));
+        sim.entityList.add(Pearl.createEntity(pearlInit, momentumInit, sim));
 
         for(int i=0; i<runtime; i++) {
             sim.tick();

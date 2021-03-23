@@ -1,7 +1,7 @@
 public class ProjectileEntity extends Entity {
 
-    ProjectileEntity(Vec3 pos, Vec3 vel) {
-        super(pos, vel);
+    ProjectileEntity(Vec3 pos, Vec3 vel, SimulationManager sim) {
+        super(pos, vel, sim);
     }
 
     @Override

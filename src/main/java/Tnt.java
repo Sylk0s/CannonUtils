@@ -1,9 +1,7 @@
 public class Tnt extends Entity {
 
-    public int fuse;
-
-    Tnt(Vec3 pos, Vec3 vel) {
-        super(pos, vel);
+    Tnt(Vec3 pos, Vec3 vel, SimulationManager sim) {
+        super(pos, vel, sim);
     }
 
     public void tick() {
@@ -24,8 +22,8 @@ public class Tnt extends Entity {
         }
     }
 
-    public static Tnt createEntity(Vec3 initPos, Vec3 initVel) {
-        Tnt tnt = new Tnt(initPos, initVel);
+    public static Tnt createEntity(Vec3 initPos, Vec3 initVel, SimulationManager sim) {
+        Tnt tnt = new Tnt(initPos, initVel, sim);
         return tnt;
     }
 }

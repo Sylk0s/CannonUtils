@@ -2,8 +2,8 @@ public class TntPacket extends Tnt {
 
     private int count;
 
-    TntPacket(int count, Vec3 pos, Vec3 vel){
-        super(pos, vel);
+    TntPacket(int count, Vec3 pos, Vec3 vel, SimulationManager sim){
+        super(pos, vel, sim);
     }
 
     @Override
@@ -11,8 +11,8 @@ public class TntPacket extends Tnt {
 
     }
 
-    public static TntPacket createEntity(int count, Vec3 initPos, Vec3 initVel) {
-        TntPacket tntPacket = new TntPacket(count, initPos, initVel);
+    public static TntPacket createEntity(int count, Vec3 initPos, Vec3 initVel, SimulationManager sim) {
+        TntPacket tntPacket = new TntPacket(count, initPos, initVel, sim);
         return tntPacket;
     }
 
