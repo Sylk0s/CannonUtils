@@ -1,10 +1,11 @@
 public class TntPacket extends Tnt {
 
-    private int count;
-
     TntPacket(int count, Vec3 pos, Vec3 vel, SimulationManager sim){
         super(pos, vel, sim);
+        setCount();
     }
+
+    protected void setCount() { super.count=count; }
 
     @Override
     protected void explode() {
@@ -15,9 +16,4 @@ public class TntPacket extends Tnt {
         TntPacket tntPacket = new TntPacket(count, initPos, initVel, sim);
         return tntPacket;
     }
-
-    /*
-    ((8-super.pos.distanceTo("Affected Entity"))/8)*this.count*("Exposure")
-    -note that this is in a direction... needs to multiply by a direction
-     */
 }

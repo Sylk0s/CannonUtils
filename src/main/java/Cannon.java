@@ -1,5 +1,5 @@
 public abstract class Cannon {
 
-    protected static void fire() { }
+    public static void fire() { }
 
 }

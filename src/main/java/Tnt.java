@@ -1,7 +1,10 @@
 public class Tnt extends Entity {
 
+    protected int count;
+
     Tnt(Vec3 pos, Vec3 vel, SimulationManager sim) {
         super(pos, vel, sim);
+        this.count=1;
     }
 
     public void tick() {
